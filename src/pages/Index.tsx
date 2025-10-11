@@ -1,69 +1,156 @@
-import { Github, Linkedin, Mail, ExternalLink, Code2, Database, Server, Cloud } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  Code2,
+  Database,
+  Server,
+  Cloud,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const Index = () => {
   const skills = [
-    { icon: Code2, name: "Frontend", techs: ["React/Next.js", "TypeScript", "React Native", "Material-UI"] },
-    { icon: Server, name: "Backend", techs: ["Go", ".NET Core", "Node.js", "PHP/Laravel"] },
-    { icon: Database, name: "Databases", techs: ["PostgreSQL", "MongoDB", "MySQL", "SQL Server"] },
-    { icon: Cloud, name: "DevOps", techs: ["Docker", "Kubernetes", "CI/CD", "Microservices"] },
+    {
+      icon: Code2,
+      name: "Frontend",
+      techs: ["React/Next.js", "TypeScript", "React Native", "Material-UI"],
+    },
+    {
+      icon: Server,
+      name: "Backend",
+      techs: ["Go", ".NET Core", "Node.js", "PHP/Laravel"],
+    },
+    {
+      icon: Database,
+      name: "Databases",
+      techs: ["PostgreSQL", "MongoDB", "MySQL", "SQL Server"],
+    },
+    {
+      icon: Cloud,
+      name: "DevOps",
+      techs: ["Docker", "Kubernetes", "CI/CD", "Microservices"],
+    },
   ];
 
   const projects = [
     {
       title: "BasketAdmin",
-      description: "Basketball management application with member management, photo uploads using MinIO, league/team organization, and hot-reloading development environment. Features role-based permissions and real-time data synchronization.",
+      description:
+        "Basketball management application with member management, photo uploads using MinIO, league/team organization, and hot-reloading development environment. Features role-based permissions and real-time data synchronization.",
       tech: ["Next.js", "Go", "PostgreSQL", "Docker"],
       demo: "https://basketadmin.com/",
-      github: "https://github.com/nolascode/BasketAdmin"
+      github: "https://github.com/nolascode/BasketAdmin",
     },
     {
       title: "Budgentia",
-      description: "Smart collaborative budget management platform for families and teams. Features JWT authentication, Material-UI components, OpenAPI documentation with Swagger UI, and real-time budget tracking. Featured on Product Hunt.",
+      description:
+        "Smart collaborative budget management platform for families and teams. Features JWT authentication, Material-UI components, OpenAPI documentation with Swagger UI, and real-time budget tracking. Featured on Product Hunt.",
       tech: ["Go", "Next.js 15", "React 19", "PostgreSQL"],
       demo: "https://budgentia.com/",
-      github: "https://github.com/nolascode/Budgentia"
+      github: "https://github.com/nolascode/Budgentia",
     },
     {
       title: "Tpresto",
-      description: "Peer-to-peer lending platform connecting lenders and borrowers. Features AI-powered risk assessment, digital contract generation with electronic signatures, flexible payment options, dispute resolution system, and comprehensive transaction tracking.",
+      description:
+        "Peer-to-peer lending platform connecting lenders and borrowers. Features AI-powered risk assessment, digital contract generation with electronic signatures, flexible payment options, dispute resolution system, and comprehensive transaction tracking.",
       tech: ["React", "Node.js", "PostgreSQL", "AI"],
-      github: "https://github.com/nolascode/Tpresto"
+      demo: "https://tprestoapp.com/",
+      github: "https://github.com/nolascode/Tpresto",
     },
     {
       title: "Poche Preventa",
-      description: "Sales management system (Sistema de Gestión de Preventas) built with Laravel 6. Features role-based permissions using Spatie, PDF generation with DomPDF, dynamic datatables, and comprehensive sales tracking and reporting.",
+      description:
+        "Sales management system (Sistema de Gestión de Preventas) built with Laravel 6. Features role-based permissions using Spatie, PDF generation with DomPDF, dynamic datatables, and comprehensive sales tracking and reporting.",
       tech: ["Laravel", "PHP", "AdminLTE", "Bootstrap"],
-      github: "https://github.com/nolascode/PochePreventa"
-    }
+      github: "https://github.com/nolascode/PochePreventa",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b border-border">
+      <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-lg z-50 border-b border-border/50 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            <a
+              href="#home"
+              className="text-2xl font-bold bg-gradient-to-r from-primary via-primary to-blue-600 bg-clip-text text-transparent hover:scale-105 transition-transform"
+            >
               Nolascode
             </a>
-            <div className="hidden md:flex gap-6">
-              <a href="#home" className="text-foreground hover:text-primary transition-colors">Home</a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
-              <a href="#skills" className="text-foreground hover:text-primary transition-colors">Skills</a>
-              <a href="#projects" className="text-foreground hover:text-primary transition-colors">Projects</a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+            <div className="hidden md:flex gap-8">
+              <a
+                href="#home"
+                className="text-foreground hover:text-primary transition-all duration-300 font-medium relative group"
+              >
+                Home
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a
+                href="#about"
+                className="text-foreground hover:text-primary transition-all duration-300 font-medium relative group"
+              >
+                About
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a
+                href="#skills"
+                className="text-foreground hover:text-primary transition-all duration-300 font-medium relative group"
+              >
+                Skills
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a
+                href="#projects"
+                className="text-foreground hover:text-primary transition-all duration-300 font-medium relative group"
+              >
+                Projects
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a
+                href="#contact"
+                className="text-foreground hover:text-primary transition-all duration-300 font-medium relative group"
+              >
+                Contact
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
             </div>
-            <div className="flex gap-3">
-              <Button variant="ghost" size="icon" asChild>
-                <a href="https://github.com/nolascode" target="_blank" rel="noopener noreferrer">
+            <div className="flex gap-2">
+              <Button
+                variant="ghost"
+                size="icon"
+                asChild
+                className="hover:bg-primary/10 hover:text-primary transition-all"
+              >
+                <a
+                  href="https://github.com/nolascode"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" asChild>
-                <a href="https://www.linkedin.com/in/ramon-nolasco-91109b265/" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="ghost"
+                size="icon"
+                asChild
+                className="hover:bg-primary/10 hover:text-primary transition-all"
+              >
+                <a
+                  href="https://www.linkedin.com/in/ramon-nolasco-91109b265/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
@@ -73,35 +160,132 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-32 pb-20 px-4">
+      <section id="home" className="relative pt-32 pb-20 px-4 overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+        </div>
+
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <div className="space-y-2">
-                <p className="text-muted-foreground text-lg">Hi, I'm</p>
-                <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-primary to-primary/70 bg-clip-text text-transparent">
+            <div className="space-y-8 animate-fade-in">
+              <div className="space-y-4">
+                <div className="inline-block">
+                  <p className="text-primary font-semibold text-lg tracking-wide">
+                    👋 Hi, I'm
+                  </p>
+                </div>
+                <h1 className="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent leading-tight">
                   Nolasco
                 </h1>
-                <p className="text-2xl md:text-3xl text-muted-foreground">Senior Software Engineer</p>
+                <div className="space-y-2">
+                  <p className="text-3xl md:text-4xl font-bold text-foreground">
+                    Senior Software Engineer
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <Badge className="bg-primary/10 text-primary hover:bg-primary/20 text-sm px-3 py-1">
+                      Full-Stack
+                    </Badge>
+                    <Badge className="bg-blue-500/10 text-blue-600 hover:bg-blue-500/20 text-sm px-3 py-1">
+                      Cloud Native
+                    </Badge>
+                    <Badge className="bg-purple-500/10 text-purple-600 hover:bg-purple-500/20 text-sm px-3 py-1">
+                      Microservices
+                    </Badge>
+                  </div>
+                </div>
               </div>
-              <p className="text-lg text-muted-foreground max-w-xl">
-                Building production web platforms with modern technologies. Specialized in scalable microservices, real-time APIs, and cloud infrastructure.
+              <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
+                Building production web platforms with modern technologies.
+                Specialized in{" "}
+                <span className="text-foreground font-semibold">
+                  scalable microservices
+                </span>
+                ,{" "}
+                <span className="text-foreground font-semibold">
+                  real-time APIs
+                </span>
+                , and{" "}
+                <span className="text-foreground font-semibold">
+                  cloud infrastructure
+                </span>
+                .
               </p>
-              <div className="flex gap-4">
-                <Button size="lg" asChild className="shadow-lg hover:shadow-xl transition-shadow">
-                  <a href="#contact">Get In Touch</a>
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Button
+                  size="lg"
+                  asChild
+                  className="shadow-lg hover:shadow-2xl transition-all duration-300 bg-gradient-to-r from-primary to-blue-600 hover:from-primary hover:to-blue-700 hover:scale-105"
+                >
+                  <a
+                    href="#contact"
+                    className="text-base px-8 inline-flex items-center"
+                  >
+                    <Mail className="w-5 h-5 mr-2" />
+                    Get In Touch
+                  </a>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <a href="#projects">View Projects</a>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  asChild
+                  className="border-2 hover:bg-primary/10 hover:border-primary transition-all duration-300 hover:scale-105 text-base px-8"
+                >
+                  <a href="#projects" className="inline-flex items-center">
+                    <ExternalLink className="w-5 h-5 mr-2" />
+                    View Projects
+                  </a>
                 </Button>
               </div>
             </div>
-            <div className="relative animate-scale-in">
-              <div className="relative w-full max-w-md mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/50 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-                <div className="relative aspect-square rounded-full bg-gradient-to-br from-primary/20 to-accent/20 p-1">
-                  <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
-                    <div className="text-9xl font-bold text-primary/30">N</div>
+            <div className="relative animate-scale-in lg:block hidden">
+              <div className="relative w-full max-w-lg mx-auto">
+                {/* Animated background blobs */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-blue-500 to-purple-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+                <div
+                  className="absolute top-10 right-10 w-40 h-40 bg-blue-400/20 rounded-full blur-2xl animate-pulse"
+                  style={{ animationDelay: "1s" }}
+                ></div>
+                <div
+                  className="absolute bottom-10 left-10 w-32 h-32 bg-purple-400/20 rounded-full blur-2xl animate-pulse"
+                  style={{ animationDelay: "2s" }}
+                ></div>
+
+                {/* Main circle */}
+                <div className="relative aspect-square rounded-3xl bg-gradient-to-br from-primary/10 via-blue-500/10 to-purple-500/10 p-1 backdrop-blur-sm border border-primary/20">
+                  <div className="w-full h-full rounded-3xl bg-card/80 backdrop-blur-md flex items-center justify-center shadow-2xl">
+                    <div className="text-center space-y-8">
+                      <div className="text-9xl font-black bg-gradient-to-br from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        N
+                      </div>
+                      <div className="grid grid-cols-3 gap-4 px-8">
+                        <div className="text-center space-y-1">
+                          <div className="text-2xl font-bold text-primary">
+                            6+
+                          </div>
+                          <div className="text-xs text-muted-foreground">
+                            Years
+                          </div>
+                        </div>
+                        <div className="text-center space-y-1">
+                          <div className="text-2xl font-bold text-blue-600">
+                            10+
+                          </div>
+                          <div className="text-xs text-muted-foreground">
+                            Projects
+                          </div>
+                        </div>
+                        <div className="text-center space-y-1">
+                          <div className="text-2xl font-bold text-purple-600">
+                            100%
+                          </div>
+                          <div className="text-xs text-muted-foreground">
+                            Committed
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -111,19 +295,71 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 bg-secondary/30">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto mb-12"></div>
+      <section
+        id="about"
+        className="py-20 px-4 bg-secondary/30 relative overflow-hidden"
+      >
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-0"></div>
 
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-border shadow-lg">
-              <CardContent className="p-8">
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Senior Software Engineer building production web platforms with <span className="text-primary font-semibold">.NET Core</span>, <span className="text-primary font-semibold">Go</span>, <span className="text-primary font-semibold">React/Next.js</span>, and various database technologies including SQL Server, PostgreSQL, MySQL, and MongoDB.
-                  <br /><br />
-                  I design microservices and real-time APIs, ship via CI/CD and containers, and add observability to cut incident time. Proven wins in event-driven systems, performance tuning, and secure-by-default architectures—with hands-on AI integrations where they drive clear business value.
-                </p>
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              About Me
+            </h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <Card className="border-border/50 shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-card/80 backdrop-blur-sm">
+              <CardContent className="p-10">
+                <div className="space-y-6">
+                  <p className="text-xl text-muted-foreground leading-relaxed">
+                    Senior Software Engineer building production web platforms
+                    with{" "}
+                    <span className="text-primary font-bold">.NET Core</span>,{" "}
+                    <span className="text-blue-600 font-bold">Go</span>,{" "}
+                    <span className="text-purple-600 font-bold">
+                      React/Next.js
+                    </span>
+                    , and various database technologies including SQL Server,
+                    PostgreSQL, MySQL, and MongoDB.
+                  </p>
+                  <p className="text-xl text-muted-foreground leading-relaxed">
+                    I design microservices and real-time APIs, ship via CI/CD
+                    and containers, and add observability to cut incident time.
+                    Proven wins in event-driven systems, performance tuning, and
+                    secure-by-default architectures—with hands-on AI
+                    integrations where they drive clear business value.
+                  </p>
+
+                  {/* Tech Stack Highlights */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-border/50">
+                    <div className="text-center p-4 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors">
+                      <Code2 className="w-8 h-8 mx-auto mb-2 text-primary" />
+                      <p className="font-semibold text-sm">Frontend</p>
+                      <p className="text-xs text-muted-foreground">
+                        React/Next.js
+                      </p>
+                    </div>
+                    <div className="text-center p-4 rounded-lg bg-blue-500/5 hover:bg-blue-500/10 transition-colors">
+                      <Server className="w-8 h-8 mx-auto mb-2 text-blue-600" />
+                      <p className="font-semibold text-sm">Backend</p>
+                      <p className="text-xs text-muted-foreground">Go/.NET</p>
+                    </div>
+                    <div className="text-center p-4 rounded-lg bg-purple-500/5 hover:bg-purple-500/10 transition-colors">
+                      <Database className="w-8 h-8 mx-auto mb-2 text-purple-600" />
+                      <p className="font-semibold text-sm">Database</p>
+                      <p className="text-xs text-muted-foreground">SQL/NoSQL</p>
+                    </div>
+                    <div className="text-center p-4 rounded-lg bg-orange-500/5 hover:bg-orange-500/10 transition-colors">
+                      <Cloud className="w-8 h-8 mx-auto mb-2 text-orange-600" />
+                      <p className="font-semibold text-sm">DevOps</p>
+                      <p className="text-xs text-muted-foreground">
+                        Docker/K8s
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -131,29 +367,46 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4">Skills</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto mb-4"></div>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Production-grade expertise in modern web technologies, cloud infrastructure, and scalable system design
-          </p>
+      <section id="skills" className="py-20 px-4 relative">
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -z-0"></div>
+
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              Technical Skills
+            </h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-blue-600 to-purple-600 mx-auto rounded-full mb-4"></div>
+            <p className="text-center text-lg text-muted-foreground max-w-2xl mx-auto">
+              Production-grade expertise in modern web technologies, cloud
+              infrastructure, and scalable system design
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {skills.map((skill, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border">
+              <Card
+                key={index}
+                className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/50"
+              >
                 <CardHeader>
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                    <skill.icon className="w-6 h-6 text-primary" />
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-blue-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300 shadow-md">
+                    <skill.icon className="w-7 h-7 text-primary" />
                   </div>
-                  <CardTitle className="text-xl">{skill.name}</CardTitle>
+                  <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
+                    {skill.name}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     {skill.techs.map((tech, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                        <span className="text-sm text-muted-foreground">{tech}</span>
+                      <div
+                        key={i}
+                        className="flex items-center gap-2 group/item hover:translate-x-1 transition-transform"
+                      >
+                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-blue-600"></div>
+                        <span className="text-sm text-muted-foreground group-hover/item:text-foreground transition-colors">
+                          {tech}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -165,14 +418,26 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 bg-secondary/30">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4">Projects</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto mb-12"></div>
+      <section
+        id="projects"
+        className="py-20 px-4 bg-secondary/30 relative overflow-hidden"
+      >
+        <div className="absolute top-20 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl -z-0"></div>
+
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              Featured Projects
+            </h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {projects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-border">
+              <Card
+                key={index}
+                className="group hover:shadow-xl transition-all duration-300 border-border"
+              >
                 <CardHeader>
                   <CardTitle className="text-2xl group-hover:text-primary transition-colors">
                     {project.title}
@@ -185,22 +450,46 @@ const Index = () => {
                   <div className="space-y-4">
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech, i) => (
-                        <Badge key={i} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
+                        <Badge
+                          key={i}
+                          variant="secondary"
+                          className="bg-primary/10 text-primary hover:bg-primary/20"
+                        >
                           {tech}
                         </Badge>
                       ))}
                     </div>
-                    <div className="flex gap-3">
+                    <div className="flex items-center gap-3">
                       {project.demo && (
-                        <Button variant="default" size="sm" asChild className="shadow-md">
-                          <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <Button
+                          variant="default"
+                          size="sm"
+                          asChild
+                          className="shadow-lg hover:shadow-xl bg-gradient-to-r from-primary to-primary/80 hover:from-primary hover:to-primary/90 transition-all duration-300 hover:scale-105 hover:brightness-110 flex-shrink-0"
+                        >
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center"
+                          >
                             <ExternalLink className="w-4 h-4 mr-2" />
                             Live Demo
                           </a>
                         </Button>
                       )}
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        asChild
+                        className="border-2 hover:bg-primary/10 hover:border-primary transition-all duration-300 hover:scale-105 hover:shadow-md flex-shrink-0"
+                      >
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center"
+                        >
                           <Github className="w-4 h-4 mr-2" />
                           View Code
                         </a>
@@ -224,10 +513,18 @@ const Index = () => {
             <CardContent className="p-8">
               <div className="text-center space-y-6">
                 <p className="text-lg text-muted-foreground">
-                  I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                  I'm always open to discussing new projects, creative ideas, or
+                  opportunities to be part of your vision.
                 </p>
-                <Button size="lg" asChild className="shadow-lg hover:shadow-xl transition-shadow">
-                  <a href="mailto:ramonnolascoacosta@gmail.com">
+                <Button
+                  size="lg"
+                  asChild
+                  className="shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <a
+                    href="mailto:ramonnolascoacosta@gmail.com"
+                    className="inline-flex items-center"
+                  >
                     <Mail className="w-5 h-5 mr-2" />
                     Send me an email
                   </a>
@@ -239,31 +536,109 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-border bg-secondary/20">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              Nolascode
-            </p>
-            <div className="flex gap-4">
-              <Button variant="ghost" size="icon" asChild>
-                <a href="https://github.com/nolascode" target="_blank" rel="noopener noreferrer">
+      <footer className="relative py-12 px-4 border-t border-border/50 bg-gradient-to-b from-secondary/30 to-secondary/50 overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-0"></div>
+
+        <div className="container mx-auto relative z-10">
+          <div className="flex flex-col items-center gap-8">
+            {/* Logo & Tagline */}
+            <div className="text-center space-y-3">
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Nolascode
+              </h3>
+              <p className="text-muted-foreground max-w-md">
+                Building production web platforms with modern technologies
+              </p>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex gap-3">
+              <Button
+                variant="ghost"
+                size="icon"
+                asChild
+                className="hover:bg-primary/10 hover:text-primary hover:scale-110 transition-all duration-300 rounded-full border border-border/50 hover:border-primary/50"
+              >
+                <a
+                  href="https://github.com/nolascode"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" asChild>
-                <a href="https://www.linkedin.com/in/ramon-nolasco-91109b265/" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="ghost"
+                size="icon"
+                asChild
+                className="hover:bg-blue-500/10 hover:text-blue-600 hover:scale-110 transition-all duration-300 rounded-full border border-border/50 hover:border-blue-500/50"
+              >
+                <a
+                  href="https://www.linkedin.com/in/ramon-nolasco-91109b265/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" asChild>
-                <a href="mailto:ramonnolascoacosta@gmail.com">
+              <Button
+                variant="ghost"
+                size="icon"
+                asChild
+                className="hover:bg-purple-500/10 hover:text-purple-600 hover:scale-110 transition-all duration-300 rounded-full border border-border/50 hover:border-purple-500/50"
+              >
+                <a
+                  href="mailto:ramonnolascoacosta@gmail.com"
+                  aria-label="Email"
+                >
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Nolascode. All rights reserved.
+
+            {/* Quick Links */}
+            <div className="flex flex-wrap justify-center gap-6 text-sm">
+              <a
+                href="#home"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Home
+              </a>
+              <a
+                href="#about"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                About
+              </a>
+              <a
+                href="#skills"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Skills
+              </a>
+              <a
+                href="#projects"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Projects
+              </a>
+              <a
+                href="#contact"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Contact
+              </a>
+            </div>
+
+            {/* Divider */}
+            <div className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+
+            {/* Copyright */}
+            <p className="text-sm text-muted-foreground text-center">
+              © {new Date().getFullYear()} Nolascode. All rights reserved. Made
+              with ❤️ and 💻
             </p>
           </div>
         </div>
