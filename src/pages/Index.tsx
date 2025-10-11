@@ -18,61 +18,143 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
+interface Project {
+  title: string;
+  description: string;
+  tech: string[];
+  demo?: string;
+  github?: string;
+  isPrivate?: boolean;
+}
+
 const Index = () => {
   const skills = [
     {
       icon: Code2,
       name: "Frontend",
-      techs: ["React/Next.js", "TypeScript", "React Native", "Material-UI"],
+      techs: [
+        "React 19",
+        "Next.js 15",
+        "TypeScript",
+        "Material UI v6",
+        "Redux Toolkit",
+        "Tailwind CSS",
+      ],
     },
     {
       icon: Server,
       name: "Backend",
-      techs: ["Go", ".NET Core", "Node.js", "PHP/Laravel"],
+      techs: [
+        "Go",
+        ".NET Core",
+        "PHP/Laravel",
+        "Node.js",
+        "RESTful APIs",
+        "WebSockets",
+      ],
     },
     {
       icon: Database,
-      name: "Databases",
-      techs: ["PostgreSQL", "MongoDB", "MySQL", "SQL Server"],
+      name: "Databases & Storage",
+      techs: ["PostgreSQL", "MySQL", "MinIO", "Redis", "Object Storage"],
     },
     {
       icon: Cloud,
-      name: "DevOps",
-      techs: ["Docker", "Kubernetes", "CI/CD", "Microservices"],
+      name: "DevOps & Tools",
+      techs: [
+        "Docker",
+        "JWT Auth",
+        "OpenAPI/Swagger",
+        "Rate Limiting",
+        "CI/CD",
+        "Git",
+      ],
     },
   ];
 
-  const projects = [
+  const projects: Project[] = [
     {
       title: "BasketAdmin",
       description:
         "Basketball management application with member management, photo uploads using MinIO, league/team organization, and hot-reloading development environment. Features role-based permissions and real-time data synchronization.",
-      tech: ["Next.js", "Go", "PostgreSQL", "Docker"],
+      tech: [
+        "Next.js 15",
+        "React 19",
+        "Material UI v6",
+        "Redux Toolkit",
+        "Docker",
+        "Go",
+        "Rate Limiting",
+        "Pagination",
+        "JWT",
+        "Go",
+        "PostgreSQL",
+        "Docker",
+        "MinIO",
+      ],
       demo: "https://basketadmin.com/",
-      github: "https://github.com/nolascode/BasketAdmin",
+      isPrivate: true,
     },
     {
       title: "Budgentia",
       description:
         "Smart collaborative budget management platform for families and teams. Features JWT authentication, Material-UI components, OpenAPI documentation with Swagger UI, and real-time budget tracking. Featured on Product Hunt.",
-      tech: ["Go", "Next.js 15", "React 19", "PostgreSQL"],
+      tech: [
+        "Next.js 15",
+        "React 19",
+        "Material UI v6",
+        "Redux Toolkit",
+        "Docker",
+        "Go",
+        "Web Sockets",
+        "Rate Limiting",
+        "Pagination",
+        "JWT",
+        "Google Auth",
+        "MinIO",
+        "OpenAPI",
+        "PostgreSQL",
+      ],
       demo: "https://budgentia.com/",
-      github: "https://github.com/nolascode/Budgentia",
+      isPrivate: true,
     },
     {
       title: "Tpresto",
       description:
         "Peer-to-peer lending platform connecting lenders and borrowers. Features AI-powered risk assessment, digital contract generation with electronic signatures, flexible payment options, dispute resolution system, and comprehensive transaction tracking.",
-      tech: ["React", "Node.js", "PostgreSQL", "AI"],
+      tech: [
+        "Next.js 15",
+        "React 19",
+        "Material UI v6",
+        "Redux Toolkit",
+        ".NET Core 8",
+        "PostgreSQL",
+        "AI",
+        "Docker",
+        "Swagger",
+        "Specification Pattern",
+        "Repository Pattern",
+        "Unit of Work Pattern",
+        "Rate Limiting",
+        "Pagination",
+      ],
       demo: "https://tprestoapp.com/",
-      github: "https://github.com/nolascode/Tpresto",
+      isPrivate: true,
+    },
+    {
+      title: "Got5",
+      description:
+        "Interactive puzzle library platform where users can create, share, and solve puzzles. Features user authentication, puzzle creation tools, rating system, and comprehensive search functionality. Supports multiple puzzle types with community-driven content.",
+      tech: ["Laravel", "Next.js", "React", "MySQL", "Tailwind CSS"],
+      demo: "https://www.got5.org/",
+      isPrivate: true,
     },
     {
       title: "Poche Preventa",
       description:
         "Sales management system (Sistema de Gestión de Preventas) built with Laravel 6. Features role-based permissions using Spatie, PDF generation with DomPDF, dynamic datatables, and comprehensive sales tracking and reporting.",
-      tech: ["Laravel", "PHP", "AdminLTE", "Bootstrap"],
-      github: "https://github.com/nolascode/PochePreventa",
+      tech: ["Laravel", "PHP", "AdminLTE", "Bootstrap", "MySQL"],
+      isPrivate: true,
     },
   ];
 
@@ -197,18 +279,21 @@ const Index = () => {
                 </div>
               </div>
               <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
-                Building production web platforms with modern technologies.
-                Specialized in{" "}
+                Building production web platforms with{" "}
+                <span className="text-foreground font-semibold">
+                  React 19, Next.js 15, Go, and .NET Core 8
+                </span>
+                . Specialized in{" "}
                 <span className="text-foreground font-semibold">
                   scalable microservices
                 </span>
                 ,{" "}
                 <span className="text-foreground font-semibold">
-                  real-time APIs
+                  real-time WebSocket APIs
                 </span>
                 , and{" "}
                 <span className="text-foreground font-semibold">
-                  cloud infrastructure
+                  Docker containerization
                 </span>
                 .
               </p>
@@ -314,22 +399,24 @@ const Index = () => {
               <CardContent className="p-10">
                 <div className="space-y-6">
                   <p className="text-xl text-muted-foreground leading-relaxed">
-                    Senior Software Engineer building production web platforms
-                    with{" "}
-                    <span className="text-primary font-bold">.NET Core</span>,{" "}
-                    <span className="text-blue-600 font-bold">Go</span>,{" "}
-                    <span className="text-purple-600 font-bold">
-                      React/Next.js
+                    Senior Software Engineer with 6+ years building production
+                    web platforms with{" "}
+                    <span className="text-primary font-bold">React 19</span>,{" "}
+                    <span className="text-blue-600 font-bold">Next.js 15</span>,{" "}
+                    <span className="text-purple-600 font-bold">Go</span>, and{" "}
+                    <span className="text-orange-600 font-bold">
+                      .NET Core 8
                     </span>
-                    , and various database technologies including SQL Server,
-                    PostgreSQL, MySQL, and MongoDB.
+                    . Experienced with PostgreSQL, MySQL, Material UI, Redux
+                    Toolkit, and Tailwind CSS.
                   </p>
                   <p className="text-xl text-muted-foreground leading-relaxed">
-                    I design microservices and real-time APIs, ship via CI/CD
-                    and containers, and add observability to cut incident time.
-                    Proven wins in event-driven systems, performance tuning, and
-                    secure-by-default architectures—with hands-on AI
-                    integrations where they drive clear business value.
+                    I design scalable microservices and real-time APIs with
+                    WebSockets, ship via Docker and CI/CD, and implement JWT
+                    authentication, rate limiting, and OpenAPI documentation.
+                    Proven expertise in Repository and Specification patterns,
+                    with hands-on AI integrations and full-stack architecture
+                    design.
                   </p>
 
                   {/* Tech Stack Highlights */}
@@ -338,24 +425,28 @@ const Index = () => {
                       <Code2 className="w-8 h-8 mx-auto mb-2 text-primary" />
                       <p className="font-semibold text-sm">Frontend</p>
                       <p className="text-xs text-muted-foreground">
-                        React/Next.js
+                        React 19/Next.js 15
                       </p>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-blue-500/5 hover:bg-blue-500/10 transition-colors">
                       <Server className="w-8 h-8 mx-auto mb-2 text-blue-600" />
                       <p className="font-semibold text-sm">Backend</p>
-                      <p className="text-xs text-muted-foreground">Go/.NET</p>
+                      <p className="text-xs text-muted-foreground">
+                        Go/.NET Core 8
+                      </p>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-purple-500/5 hover:bg-purple-500/10 transition-colors">
                       <Database className="w-8 h-8 mx-auto mb-2 text-purple-600" />
                       <p className="font-semibold text-sm">Database</p>
-                      <p className="text-xs text-muted-foreground">SQL/NoSQL</p>
+                      <p className="text-xs text-muted-foreground">
+                        PostgreSQL/MySQL
+                      </p>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-orange-500/5 hover:bg-orange-500/10 transition-colors">
                       <Cloud className="w-8 h-8 mx-auto mb-2 text-orange-600" />
                       <p className="font-semibold text-sm">DevOps</p>
                       <p className="text-xs text-muted-foreground">
-                        Docker/K8s
+                        Docker/JWT
                       </p>
                     </div>
                   </div>
@@ -478,22 +569,31 @@ const Index = () => {
                           </a>
                         </Button>
                       )}
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        asChild
-                        className="border-2 hover:bg-primary/10 hover:border-primary transition-all duration-300 hover:scale-105 hover:shadow-md flex-shrink-0"
-                      >
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center"
+                      {project.github ? (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          asChild
+                          className="border-2 hover:bg-primary/10 hover:border-primary transition-all duration-300 hover:scale-105 hover:shadow-md flex-shrink-0"
                         >
-                          <Github className="w-4 h-4 mr-2" />
-                          View Code
-                        </a>
-                      </Button>
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center"
+                          >
+                            <Github className="w-4 h-4 mr-2" />
+                            View Code
+                          </a>
+                        </Button>
+                      ) : project.isPrivate ? (
+                        <Badge
+                          variant="secondary"
+                          className="px-4 py-2 text-sm bg-muted/50 text-muted-foreground border border-border"
+                        >
+                          🔒 Private Repository
+                        </Badge>
+                      ) : null}
                     </div>
                   </div>
                 </CardContent>
