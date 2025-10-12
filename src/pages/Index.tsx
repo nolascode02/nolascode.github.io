@@ -33,41 +33,44 @@ const Index = () => {
       icon: Code2,
       name: "Frontend",
       techs: [
-        "React 19",
-        "Next.js 15",
+        "React",
+        "Next.js",
         "TypeScript",
-        "Material UI v6",
+        "Material UI",
         "Redux Toolkit",
         "Tailwind CSS",
       ],
     },
     {
       icon: Server,
-      name: "Backend",
+      name: "Backend & Frameworks",
       techs: [
-        "Go",
         ".NET Core",
+        "ASP.NET Core",
+        "Go",
+        "EF Core",
+        "GORM",
         "PHP/Laravel",
         "Node.js",
-        "RESTful APIs",
-        "WebSockets",
       ],
     },
     {
       icon: Database,
-      name: "Databases & Storage",
-      techs: ["PostgreSQL", "MySQL", "MinIO", "Redis", "Object Storage"],
+      name: "Databases & Caching",
+      techs: ["SQL Server", "PostgreSQL", "MySQL", "MongoDB", "Redis", "MinIO"],
     },
     {
       icon: Cloud,
-      name: "DevOps & Tools",
+      name: "DevOps & Integration",
       techs: [
         "Docker",
-        "JWT Auth",
-        "OpenAPI/Swagger",
-        "Rate Limiting",
-        "CI/CD",
-        "Git",
+        "Azure DevOps",
+        "GitHub Actions",
+        "Swagger/OpenAPI",
+        "SignalR",
+        "OAuth2/OIDC",
+        "JWT + 2FA",
+        "OpenTelemetry",
       ],
     },
   ];
@@ -281,19 +284,19 @@ const Index = () => {
               <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
                 Building production web platforms with{" "}
                 <span className="text-foreground font-semibold">
-                  React 19, Next.js 15, Go, and .NET Core 8
+                  .NET Core, Go, React/Next.js
                 </span>
-                . Specialized in{" "}
+                , and SQL Server/PostgreSQL/MySQL. Specialized in{" "}
                 <span className="text-foreground font-semibold">
-                  scalable microservices
+                  event-driven microservices
                 </span>
                 ,{" "}
                 <span className="text-foreground font-semibold">
-                  real-time WebSocket APIs
+                  real-time WebSocket APIs (SignalR/Melody)
                 </span>
                 , and{" "}
                 <span className="text-foreground font-semibold">
-                  Docker containerization
+                  CI/CD with Azure DevOps
                 </span>
                 .
               </p>
@@ -399,24 +402,29 @@ const Index = () => {
               <CardContent className="p-10">
                 <div className="space-y-6">
                   <p className="text-xl text-muted-foreground leading-relaxed">
-                    Senior Software Engineer with 6+ years building production
-                    web platforms with{" "}
-                    <span className="text-primary font-bold">React 19</span>,{" "}
-                    <span className="text-blue-600 font-bold">Next.js 15</span>,{" "}
-                    <span className="text-purple-600 font-bold">Go</span>, and{" "}
-                    <span className="text-orange-600 font-bold">
-                      .NET Core 8
+                    Senior Software Engineer at{" "}
+                    <span className="text-primary font-bold">
+                      Neural Technology Solutions
+                    </span>{" "}
+                    with 6+ years building production web platforms using{" "}
+                    <span className="text-orange-600 font-bold">.NET Core</span>
+                    , <span className="text-blue-600 font-bold">Go</span>,{" "}
+                    <span className="text-purple-600 font-bold">
+                      React/Next.js
                     </span>
-                    . Experienced with PostgreSQL, MySQL, Material UI, Redux
-                    Toolkit, and Tailwind CSS.
+                    , and SQL Server/PostgreSQL/MySQL/MongoDB. Architected
+                    solutions in Clean Architecture with EF Core and GORM,
+                    selecting the optimal stack per use case.
                   </p>
                   <p className="text-xl text-muted-foreground leading-relaxed">
-                    I design scalable microservices and real-time APIs with
-                    WebSockets, ship via Docker and CI/CD, and implement JWT
-                    authentication, rate limiting, and OpenAPI documentation.
-                    Proven expertise in Repository and Specification patterns,
-                    with hands-on AI integrations and full-stack architecture
-                    design.
+                    I design event-driven, real-time systems with WebSockets
+                    (Melody/SignalR), build async pipelines with goroutines and
+                    Redis caching (cutting DB load by ~65%), and ship via CI/CD
+                    (Azure DevOps, GitHub Actions) with 95% automated test
+                    coverage. Proven wins in performance tuning,
+                    secure-by-default architectures, and hands-on AI
+                    integrations (OpenAI GPT, Stripe, SendGrid, OAuth2/OIDC with
+                    JWT + 2FA).
                   </p>
 
                   {/* Tech Stack Highlights */}
@@ -425,28 +433,28 @@ const Index = () => {
                       <Code2 className="w-8 h-8 mx-auto mb-2 text-primary" />
                       <p className="font-semibold text-sm">Frontend</p>
                       <p className="text-xs text-muted-foreground">
-                        React 19/Next.js 15
+                        React/Next.js
                       </p>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-blue-500/5 hover:bg-blue-500/10 transition-colors">
                       <Server className="w-8 h-8 mx-auto mb-2 text-blue-600" />
                       <p className="font-semibold text-sm">Backend</p>
                       <p className="text-xs text-muted-foreground">
-                        Go/.NET Core 8
+                        .NET Core/Go
                       </p>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-purple-500/5 hover:bg-purple-500/10 transition-colors">
                       <Database className="w-8 h-8 mx-auto mb-2 text-purple-600" />
                       <p className="font-semibold text-sm">Database</p>
                       <p className="text-xs text-muted-foreground">
-                        PostgreSQL/MySQL
+                        SQL Server/PostgreSQL
                       </p>
                     </div>
                     <div className="text-center p-4 rounded-lg bg-orange-500/5 hover:bg-orange-500/10 transition-colors">
                       <Cloud className="w-8 h-8 mx-auto mb-2 text-orange-600" />
                       <p className="font-semibold text-sm">DevOps</p>
                       <p className="text-xs text-muted-foreground">
-                        Docker/JWT
+                        Azure DevOps/Docker
                       </p>
                     </div>
                   </div>

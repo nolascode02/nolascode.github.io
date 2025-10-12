@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramon Nolasco - Senior Software Engineer</title>
+    <meta name="description" content="Senior Software Engineer specializing in .NET Core, Go, React, and cloud technologies">
+    <style>
+        @page {
+            margin: 0;
+            size: letter;
+        }
+        
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                padding: 30px 40px 30px 25px;
+            }
+            .section {
+                margin-top: 18px;
+            }
+            h1 {
+                margin-bottom: 14px;
+                font-size: 30px;
+            }
+            .job {
+                margin-bottom: 15px;
+            }
+            .job-description p {
+                margin-bottom: 5px;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e8e8e8;
+            padding: 15px;
+            line-height: 1.45;
+            color: #333;
+            font-size: 13px;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 35px 45px 35px 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.08);
+        }
+        
+        h1 {
+            color: #5c7b96;
+            font-size: 32px;
+            margin-bottom: 18px;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        
+        h2 {
+            color: #a8c8d8;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+        h3 {
+            font-weight: 700;
+            font-size: 13.5px;
+            margin-bottom: 2px;
+            color: #000;
+        }
+        
+        .section {
+            display: grid;
+            grid-template-columns: 175px 1fr;
+            gap: 18px;
+            margin-top: 22px;
+            position: relative;
+        }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 175px;
+            right: 0;
+            height: 1px;
+            background: #ddd;
+        }
+        
+        .section-title {
+            color: #a8c8d8;
+            font-size: 15px;
+            font-weight: 600;
+            text-align: right;
+            padding-right: 18px;
+            padding-top: 12px;
+        }
+        
+        .section-content {
+            padding-top: 12px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: flex-start;
+            gap: 18px;
+            font-size: 12px;
+            color: #333;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .contact-label {
+            font-weight: 600;
+            min-width: 60px;
+        }
+        
+        .profile-text {
+            text-align: justify;
+            line-height: 1.55;
+            font-size: 12.5px;
+        }
+        
+        .job {
+            margin-bottom: 18px;
+        }
+        
+        .job:last-child {
+            margin-bottom: 0;
+        }
+        
+        .job-title {
+            font-weight: 700;
+            font-size: 13.5px;
+            margin-bottom: 2px;
+            color: #000;
+        }
+        
+        .company {
+            font-weight: 600;
+            margin-bottom: 3px;
+            font-size: 12.5px;
+            color: #000;
+        }
+        
+        .job-meta {
+            color: #999;
+            font-size: 11.5px;
+            margin-bottom: 8px;
+        }
+        
+        .meta-label {
+            font-weight: 600;
+        }
+        
+        .job-description p {
+            margin-bottom: 6px;
+            text-align: justify;
+            line-height: 1.5;
+            font-size: 12.5px;
+        }
+        
+        .job-description p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .degree {
+            margin-bottom: 14px;
+        }
+        
+        .degree:last-child {
+            margin-bottom: 0;
+        }
+        
+        .degree-title {
+            font-weight: 700;
+            margin-bottom: 2px;
+            font-size: 12.5px;
+        }
+        
+        .institution {
+            font-weight: 600;
+            margin-bottom: 3px;
+            font-size: 12.5px;
+        }
+        
+        .degree-meta {
+            color: #999;
+            font-size: 11.5px;
+        }
+        
+        .languages {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .language-name {
+            font-weight: 600;
+            margin-bottom: 2px;
+            font-size: 12.5px;
+        }
+        
+        .language-level {
+            color: #a8c8d8;
+            font-size: 12px;
+        }
+        
+        .additional-content {
+            margin-top: -8px;
+        }
+        
+        /* ATS Optimization: Hidden keywords */
+        .keywords {
+            position: absolute;
+            left: -9999px;
+            font-size: 1px;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ATS Keywords (invisible but parseable) -->
+        <div class="keywords">
+            Senior Software Engineer, .NET Core, Go, React, Next.js, SQL Server, PostgreSQL, MySQL, MongoDB, 
+            Microservices, REST API, WebSockets, CI/CD, Docker, Azure DevOps, GitHub Actions, 
+            Clean Architecture, EF Core, GORM, SignalR, Redis, OpenAI, Stripe, OAuth2, JWT, 
+            OpenTelemetry, Serilog, Swagger, OpenAPI, ASP.NET Core, Laravel, CodeIgniter, 
+            Android, Java, Scrum, Agile, Git, GitLab
+        </div>
+        
+        <header>
+            <h1>Ramon Nolasco</h1>
+        </header>
+        
+        <section class="section">
+            <h2 class="section-title">Personal<br>Information</h2>
+            <div class="section-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">Phone:</span>
+                        <span>8292800204</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <span>ramonnolascoacosta@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Website:</span>
+                        <span>https://nolascode.net/</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">Profile</h2>
+            <div class="section-content">
+                <p class="profile-text">Senior Software Engineer building production web platforms with .NET Core, Go, React/Next.js, and SQL Server/PostgreSQL/MySQL/MongoDB. I design microservices and real-time APIs, ship via CI/CD and containers, and cut incident time. Proven wins in event-driven systems, performance tuning, and secure-by-default architectures—with hands-on AI integrations where they drive clear business value.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="section-content">
+                <p class="profile-text"><strong>Languages & Frameworks:</strong> .NET Core, Go, React, Next.js, ASP.NET Core<br>
+                <strong>Data Access:</strong> EF Core, GORM<br>
+                <strong>Databases:</strong> SQL Server, PostgreSQL, MongoDB, MySQL, Redis<br>
+                <strong>DevOps & CI/CD:</strong> Docker, Azure DevOps, GitHub Actions<br>
+                <strong>API & Integration:</strong> Swagger/OpenAPI, WebSockets, REST APIs, SignalR, Melody<br>
+                <strong>Third-Party Services:</strong> Stripe API, SendGrid, OpenAI GPT<br>
+                <strong>Security & Auth:</strong> OAuth2, OIDC, JWT, 2FA<br>
+                <strong>Observability:</strong> OpenTelemetry, Serilog, Logrus</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="section-content">
+                <article class="job">
+                    <h3 class="job-title">Senior Software Engineer</h3>
+                    <div class="company">Neural Technology Solutions</div>
+                    <div class="job-meta">
+                        <span class="meta-label">Date:</span> 08/2023 - Present | 
+                        <span class="meta-label">Location:</span> SANTO DOMINGO DE GUZMÁN, DISTRITO NACIONAL, REPÚBLICA DOMINICANA
+                    </div>
+                    <div class="job-description">
+                        <p>Architected and shipped solutions in .NET Core (Clean Architecture, EF Core, SQL Server) and Go (gorilla/mux, GORM, MySQL/PostgreSQL), selecting the optimal stack per use case.</p>
+                        <p>Designed event-driven, real-time collaboration with WebSockets (Melody/SignalR); built async pipelines with goroutines and Redis caching, cutting DB load by ~65%.</p>
+                        <p>Established enterprise CI/CD with Azure DevOps and GitHub Actions; Docker containerization, 95% automated test coverage (xUnit/Go test), and blue-green deploys across Dev/QA/Staging/Prod.</p>
+                        <p>Integrated OpenAI GPT (AI features), Stripe (payments), SendGrid (notifications), and OAuth2/OIDC with JWT + 2FA for secure authentication.</p>
+                        <p>Built API-first ecosystems with Swagger/OpenAPI and maintained Postman collections for stakeholder integrations.</p>
+                        <p>Implemented observability via OpenTelemetry and structured logging (Serilog/Logrus) for faster detection and resolution.</p>
+                        <p>Led backend architecture and security design; optimized databases with query tuning, indexing, and connection pooling.</p>
+                    </div>
+                </article>
+                
+                <article class="job">
+                    <h3 class="job-title">Fullstack Developer at CAC</h3>
+                    <div class="company">Consorcio Azucarero Central (CAC)</div>
+                    <div class="job-meta">
+                        <span class="meta-label">Date:</span> 01/2022 - 12/2023 | 
+                        <span class="meta-label">Location:</span> BARAHONA, BARAHONA, DOMINICAN REPUBLIC
+                    </div>
+                    <div class="job-description">
+                        <p>Delivered React + ASP.NET Core applications that automated internal workflows and reduced manual processing across business units.</p>
+                        <p>Designed data models and tuned queries on Oracle/EF Core to speed up reports and eliminate long-running operations.</p>
+                        <p>Deployed GitLab on-premises CI with code review and static analysis, standardizing the delivery pipeline and lowering escaped defects.</p>
+                        <p>Built an Android (Java) companion app with offline sync for field data capture, reducing input errors and accelerating updates from the field.</p>
+                    </div>
+                </article>
+                
+                <article class="job" style="page-break-before: always; margin-top: 30px;">
+                    <h3 class="job-title">Web Project Manager</h3>
+                    <div class="company">DTE - (Diseño y Tecnología Empresarial).</div>
+                    <div class="job-meta">
+                        <span class="meta-label">Date:</span> 01/2018 - 12/2020 | 
+                        <span class="meta-label">Location:</span> SANTO DOMINGO DE GUZMÁN, DISTRITO NACIONAL, REPÚBLICA DOMINICANA
+                    </div>
+                    <div class="job-description">
+                        <p>Promoted in 2 months for delivery performance and client satisfaction.</p>
+                        <p style="margin-top: 6px;">Managed concurrent web projects (Laravel/CodeIgniter/MySQL) from planning through delivery, consistently meeting scope, schedule, and quality goals.</p>
+                        <p>Established Scrum cadence, definition of done, and code review standards that reduced defects and improved client satisfaction.</p>
+                        <p>Standardized Git branching and CI practices to increase team throughput and minimize rework.</p>
+                    </div>
+                </article>
+                
+                <article class="job">
+                    <h3 class="job-title">Customer Service Representative</h3>
+                    <div class="company">Teleperformance</div>
+                    <div class="job-meta">
+                        <span class="meta-label">Date:</span> 07/2014 - 10/2015 | 
+                        <span class="meta-label">Location:</span> AVE ROBERTO PASTORIZA ESQ SAN MARTIN DE PORRES, AV ING ROBERTO PASTORIZA 256, SANTO DOMINGO 10121
+                    </div>
+                    <div class="job-description">
+                        <p>Resolved high-volume customer issues with strong CSAT and first-contact resolution; developed communication and KPI discipline useful in engineering on-call.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="section-content">
+                <article class="degree">
+                    <div class="degree-title">Tecnología/Técnico de software informático | Professional Technician in software development</div>
+                    <div class="institution">Federico Henríquez y Carvajal</div>
+                    <div class="degree-meta"><span class="meta-label">Date:</span> 08/2005 - 08/2009</div>
+                </article>
+                
+                <article class="degree">
+                    <div class="degree-title">Computer Software Engineering | Software Developer</div>
+                    <div class="institution">ITLA</div>
+                    <div class="degree-meta"><span class="meta-label">Date:</span> 04/2014</div>
+                </article>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">Languages</h2>
+            <div class="section-content">
+                <div class="languages">
+                    <div class="language">
+                        <div class="language-name">Español</div>
+                        <div class="language-level">Professional</div>
+                    </div>
+                    <div class="language">
+                        <div class="language-name">Inglés</div>
+                        <div class="language-level">Professional</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
