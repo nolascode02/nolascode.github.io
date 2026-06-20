@@ -77,6 +77,31 @@ const Index = () => {
 
   const projects: Project[] = [
     {
+      title: "Domitracking",
+      description:
+        "GPS tracking and fleet-mobility platform for the Dominican Republic, built as a monorepo of independently deployable services. Domain services in NestJS cover CRM & billing, fuel management, fleet maintenance, and multi-tenant routing & distribution, integrated over REST and RabbitMQ. Includes a GraphHopper + jsprit routing/optimization engine and a React Native driver app with offline electronic proof-of-delivery.",
+      tech: [
+        "Java 21",
+        "NestJS 11",
+        "Next.js 15",
+        "React 19",
+        "TypeORM",
+        "PostgreSQL 16",
+        "RabbitMQ",
+        "Redis",
+        "Docker",
+        "GraphHopper",
+        "MapLibre",
+        "React Native",
+        "Python 3.12",
+        "JWT",
+        "Row-Level Security",
+        "GitLab CI",
+      ],
+      demo: "https://domitracking.com/",
+      isPrivate: true,
+    },
+    {
       title: "BasketAdmin",
       description:
         "Basketball management application with member management, photo uploads using MinIO, league/team organization, and hot-reloading development environment. Features role-based permissions and real-time data synchronization.",
