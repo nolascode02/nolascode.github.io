@@ -81,7 +81,6 @@ const Index = () => {
       description:
         "GPS tracking and fleet-mobility platform for the Dominican Republic, built as a monorepo of independently deployable services. Domain services in NestJS cover CRM & billing, fuel management, fleet maintenance, and multi-tenant routing & distribution, integrated over REST and RabbitMQ. Includes a GraphHopper + jsprit routing/optimization engine and a React Native driver app with offline electronic proof-of-delivery.",
       tech: [
-        "Java 21",
         "NestJS 11",
         "Next.js 15",
         "React 19",
